@@ -26,10 +26,10 @@ public:
 
     // operators
     User& operator=(const User &obj); // operator=
-    //User& operator+=(const Apartment &obj); // operator overloading as member functions
+    bool operator!=(const User &other) const; // operator overloading as member functions
     friend std::ostream& operator<<(std::ostream& out, const User &obj); // operator<<
     friend std::istream& operator>>(std::istream& in, User &obj); // operator>>
-    // operator overloading as friend/ non-member functions
+    bool operator<(const User& obj);// operator overloading as non-member function
 
     // getters
     [[nodiscard]] char *getUsername() const;

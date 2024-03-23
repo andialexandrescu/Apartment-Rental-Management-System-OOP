@@ -20,9 +20,16 @@ int main() {
     Apartment Ap8("edas2sa", "Florence, Italy", "Entire Condo", "The apartment is located in a pedestrian area in the historic center of Florence, a stone's throw from the Duomo and Piazza della Signoria, and not far from the Ponte Vecchio and the Mercato di San Lorenzo.", 3, 4, 220);
     Apartment Ap9("adsw3aa", "Lecce, Italy", "Entire Suite", "Wooden Cabin situated just under 1 km away from Torre Rinalda and 9 km from Oaks.", 3, 4, 80);
     Apartment Ap10("sdgfas4", "Furore, Italy", "Duplex", "Romantic, quiet and sea view, this accommodation opens to the cozy area, consisting of a small living room with kitchenette from which you can access the panoramic terrace", 3, 4, 110);
+    Apartment Ap11("sajgsd", "Lefkada, Greece", "Villa", "On the west coast of Lefkada, there are unlimited spectacles offered by all indoor and outdoor spaces, showcasing the sea and sunset on the horizon.", 2, 3, 145);
+    Apartment Ap12("asfDSDG", "Ko Samui, Thailand", "Entire Condo", "Enjoy the panoramic sea and mountain views from the pool, terrace and lush garden. The villa is located on a small hilltop in Maenam village, a locals-only spot with a bustling night market and long sandy beach.", 5, 8, 120);
+    Apartment Ap13("fsafAS", "Kas, Turkey", "Villa", "This rental holiday villa is located in Kördere area of Kalkan. It is a holiday villa with sea view and with unseen pool area. The city center is 3 km away.", 5, 12, 260);
+    Apartment Ap14("sajgsd", "Lefkada, Greece", "Villa", "On the west coast of Lefkada, there are unlimited spectacles offered by all indoor and outdoor spaces, showcasing the sea and sunset on the horizon.", 2, 3, 145);
+    Apartment Ap15("gsdAAS", "Jezierze, Poland", "Houseboat", "The Moors, or a cottage on the water, is a unique place where you can relax and connect with nature in a special way.", 1, 3, 75);
+    Apartment Ap16("adsFAD", "Warsaw, Poland", "Rental Unit", "This apartment can be found in the modern city center, near Grzybowski Square and Saski Garden. A supermarket is located in the same building, and the Hala Mirowska food market is nearby, along with restaurants, cafes, and 2 modern art galleries.", 4, 5, 210);
+    Apartment Ap17("fdjhg9", "Rabka-Zdroj, Poland", "Cottage", "Comfortable year-round cottages, located on a hill with a beautiful view of the forest. The perfect place to relax away from the hustle and bustle.", 3, 4, 125);
 
     Reservation r;
-    r += Ap1; r += Ap2; r += Ap3; r += Ap4; r += Ap5; r += Ap6; r += Ap7; r += Ap8; r += Ap9; r += Ap10;
+    r += Ap1; r += Ap2; r += Ap3; r += Ap4; r += Ap5; r += Ap6; r += Ap7; r += Ap8; r += Ap9; r += Ap10; r += Ap11; r += Ap12; r += Ap13; r += Ap14; r += Ap15; r += Ap16; r += Ap17;
 
     std::this_thread::sleep_for(std::chrono::milliseconds(250));
     std::cout<<"Welcome to our apartment rental management system! Are you looking to rent an apartment while travelling OR would you like to put your apartment up for rent? Then, you're in the right place."<<std::endl;

@@ -70,6 +70,22 @@ User& User::operator=(const User &other_obj) { // function which returns a refer
     return *this; // the returning reference part
 }
 
+bool User::operator!=(const User &other) const {
+    return (username != other.username && id_number != other.id_number && email != other.email && phone_number != other.phone_number);
+}
+
+bool User::operator<(const User &obj) {
+    if(strcmp(this->username,obj.username) < 0)
+    {
+        std::cout<<this->username<<" comes before "<<obj.username<<" lexicographically"<<std::endl;
+        return true;
+    } else
+    {
+        std::cout<<this->username<<" comes after "<<obj.username<<" lexicographically"<<std::endl;
+        return false;
+    }
+}
+
 std::ostream &operator<<(std::ostream &out, const User &obj) {
     out<<std::endl<<"Username: @"<<obj.username<<std::endl;
     out<<"Password: "<<obj.password<<std::endl;
@@ -247,12 +263,3 @@ void User::generateStrongPassword(User &user) {
 bool User::validatingIDNumber(std::string &id_no) {
     return (!id_no.empty() && std::all_of(id_no.begin(), id_no.end(), ::isdigit));
 }
-
-/*User &User::operator+=(const Apartment &obj) {
-    this->reserv.push_back(obj);
-    return *this;
-}
-
-std::vector<Apartment> User::getReserv() const {
-    return reserv;
-}*/

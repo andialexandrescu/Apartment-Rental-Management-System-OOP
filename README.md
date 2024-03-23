@@ -1,6 +1,32 @@
-# Nu primesc notă pentru că nu am pus titlu și descriere
+# Project Title:
+## Apartment Rental Management System
+# Description:
+It represents a management system meant to respond to inquiries based on user input. The user must
+first specify the intent of using the platform, getting to experience two possible interfaces: Tenant's view
+or Host's view.
 
-## Cerințe obligatorii 
+A tenant is able to input search criteria, such as location, number of rooms/ guests (1) and maximum price range per
+individual (per night). A list of results is displayed containing all of the apartments that fit the criteria chosen.
+Then, the individual is prompted to either choose an apartment, or return to the searching submenu. Once a choice is made, the
+tenant has to enter the apartment ID assigned and specify the dates of their booking (2). Shortly after, the user
+has to re-enter the number of guests, mentioning how many are underage, in order to compute the total price of their stay.
+The last steps of their booking involve user registration and initiating card transfer process.
+
+The host is prompted immediately to create an account and mention how many apartments the individual intends to
+upload on the platform. Once the apartment details are specified, the host is able to see the updated searching submenu.
+
+# Tehnical implementations:
+
+(1) - These choices are slightly different, considering an apartment might host more people due to it's capacity,
+however it might have less rooms than expected.
+
+(2) - Each apartment has a vector of int variables, being the dates in the year on which it has already been booked by
+other clients. Since the user must include a start and end date of their stay, this specific time interval is being checked
+whether it's available or not, then the apartment is booked if it is not overlapping with another time frame.
+
+# Nu primesc notă dacă că nu am pus titlu și descriere
+
+## Cerințe obligatorii
 
 Nerespectarea duce la nepunctarea proiectului
 
@@ -30,50 +56,18 @@ Nerespectarea duce la nepunctarea proiectului
     - [ ] alt operator supraîncărcat ca funcție non-membră
   - pentru celelalte clase se va definii doar ce e nevoie
 - [ ] implementarea a minim 3 funcții membru publice pentru funcționalități specifice temei alese, dintre care cel puțin 1-2 funcții mai complexe (3p)
-- nu doar citiri/afișări sau adăugat/șters elemente într-un/dintr-un vector 
+- nu doar citiri/afișări sau adăugat/șters elemente într-un/dintr-un vector
 - [ ] scenariu de utilizare a claselor definite (1p):
   - crearea de obiecte și apelarea tuturor funcțiilor membru publice în main
   - vor fi adăugate în fișierul `tastatura.txt` DOAR exemple de date de intrare de la tastatură (dacă există); dacă aveți nevoie de date din fișiere, creați alte fișiere separat
 - [ ] opțiune pentru citirea și afișarea a n obiecte (1p)
-
-### Tema 2
-
-#### Cerințe
-- [ ] separarea codului din clase în `.h` (sau `.hpp`) și `.cpp` [(0.25p)](https://github.com/Ionnier/poo/tree/main/proiect/P01#separarea-implement%C4%83rii-metodelor-din-clase)
-- [ ] cât mai multe `const` [(0.25p)](https://github.com/Ionnier/poo/tree/main/labs/L04#reminder-const-everywhere)
-- [ ] moșteniri [(5p)](https://github.com/Ionnier/poo/tree/main/labs/L04#exemplu):
-  - [ ] minim o clasă de bază și **2 clase derivate**
-  - [ ] încercați să derivați o clasă creată anterior
-    - dacă nu reușiți
-      - creați o altă clasă care poate fi integrată cu clasele anterioare
-      - menționați de ce nu ați reușit și ce ați încercat
-  - [ ] ilustrați [upcast](https://github.com/Ionnier/poo/tree/main/labs/L04#solu%C8%9Bie-func%C8%9Bii-virtuale-late-binding)-ul și [downcast](https://github.com/Ionnier/poo/tree/main/labs/L04#smarter-downcast-dynamic-cast)-ul folosind funcții virtuale și pointeri la clasa de bază
-    - aceasta va fi făcută prin **2-3** metode specifice temei alese
-    - funcțiile pentru citire / afișare sau destructorul nu sunt incluse deși o să trebuiască să le implementați 
-  - [ ] apelarea constructorului din clasa de bază din [constructori din derivate](https://github.com/Ionnier/poo/tree/main/labs/L04#comportamentul-constructorului-la-derivare)
-  - [ ] suprascris [cc](https://github.com/Ionnier/poo/tree/main/labs/L04#comportamentul-constructorului-de-copiere-la-derivare)/op= pentru copieri/atribuiri corecte
-  - [ ] destructor [virtual](https://github.com/Ionnier/poo/tree/main/labs/L04#solu%C8%9Bie-func%C8%9Bii-virtuale-late-binding)
-- [ ] funcții și atribute `static` (în clase) [(1p)](https://github.com/Ionnier/poo/tree/main/labs/L04#static)
-- [ ] excepții [(1p)](https://github.com/Ionnier/poo/tree/main/labs/L04#exception-handling)
-  - porniți de la `std::exception`
-  - ilustrați propagarea excepțiilor
-  - ilustrati upcasting-ul în blocurile catch
-  - minim folosit într-un loc în care tratarea erorilor în modurile clasice este mai dificilă
-- [ ] folosirea unei clase abstracte (fie la exceptii, fie la moșteniri) [(0.5p)](https://github.com/Ionnier/poo/tree/main/labs/L04#clase-abstracte)
-- [ ] actualizarea meniului & scenariului de utilizare [(0.5p)](https://github.com/Ionnier/oop-template-t1/blob/main/main.cpp#L16)
-- [ ] citirea și afișarea a n obiecte [(0.5p)](https://github.com/Ionnier/oop-template-t1/blob/main/main.cpp#L13)
-  - poate fi combinat cu demonstrarea upcasting-ului & downcast-ului printr-un vector către o clasă de bază
-  - poate fi făcut oriunde (dacă aveți deja o clasă cu un vector, de exemplu o clasă Coș cu un vector<Produs>)
-- [ ] existența unui pull request către branch-ul în care lucrați ce include adăugarea unei noi derivate ce evidențiază că modificările aduse sunt minimale (0.5p)
-  - derivata nu poate fi una ștearsă și rescrisă
-  - derivata va avea date membre noi + o modificare de comportament pe una dintre funcțiile virtuale
 
 ## Recomandare Tema
 
 * rezolvați tema 1 cu niște itemi generali ca să puteți extinde tema cu ușurință la următoarele teme.
   - coș de cumpărături + produse
   - sistem de validare a documentelor + documente de identitate
-  - sistem de gestionare a biletelor + bilet 
-* funcționalitatea creată să folosească metode ale obiectului generic 
+  - sistem de gestionare a biletelor + bilet
+* funcționalitatea creată să folosească metode ale obiectului generic
 * ar fi bine ca relația de agregare să fie făcută cu un obiect general în stilul celor de mai sus ^
 * branch-uri + commit-uri punctuale

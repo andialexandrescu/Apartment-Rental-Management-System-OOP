@@ -38,7 +38,7 @@ int main() {
     std::this_thread::sleep_for(std::chrono::milliseconds(500));
     std::cout<<std::endl<<"An interactive menu will be displayed to improve your user experience."<<std::endl;
     std::this_thread::sleep_for(std::chrono::milliseconds(1000));
-    std::cout<<"------- These are of the apartments listed on our platform so far: -------"<<std::endl;
+    std::cout<<"------- These are all of the apartments listed on our platform so far: -------"<<std::endl;
     std::this_thread::sleep_for(std::chrono::milliseconds(1500));
 
     // using getters to get rid of [unusedFunction] cppcheck error

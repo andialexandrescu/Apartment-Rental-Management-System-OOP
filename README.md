@@ -15,7 +15,7 @@ The last steps of their booking involve user registration and initiating card tr
 The host is prompted immediately to create an account and mention how many apartments the individual intends to
 upload on the platform. Once the apartment details are specified, the host is able to see the updated searching submenu.
 
-# Tehnical implementations:
+# Technical implementations:
 
 (1) - These choices are slightly different, considering an apartment might host more people due to it's capacity,
 however it might have less rooms than expected.

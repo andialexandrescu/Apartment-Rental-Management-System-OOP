@@ -1,5 +1,5 @@
 # Project Title:
-## Apartment Rental Management System
+## Apartment Rental Management System Object Oriented Programming C++
 # Description:
 It represents a management system meant to respond to inquiries based on user input. The user must
 first specify the intent of using the platform, getting to experience two possible interfaces: Tenant's view
